@@ -1,0 +1,280 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Platform/Sand_Small.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HUD2.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
+[ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Platform/Sand_Broken.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Platform/Floor_sand.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Platform/Exit.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Items/portal_yellow.png" type="Texture" id=10]
+[ext_resource path="res://Background/ParallaxBackground3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/My Memory Lane.ogg" type="AudioStream" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2814.36, 40.9006 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.239216 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 20.8878
+height = 72.9346
+
+[node name="Level2" type="Node2D"]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Floor_sand" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 126.514, 535.421 )
+
+[node name="Floor_sand2" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3246.16, 501.022 )
+
+[node name="Floor_sand3" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4706.66, 628.821 )
+
+[node name="Sand_Small" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 379.094, 536.606 )
+
+[node name="Sand_Small2" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 573.981, 485.882 )
+
+[node name="Sand_Small3" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 752.85, 392.443 )
+
+[node name="Sand_Small4" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 750.381, 581.746 )
+
+[node name="Sand_Small5" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 944.523, 322.353 )
+
+[node name="Sand_Small6" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 944.131, 644.461 )
+
+[node name="Sand_Small7" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1129.14, 577.762 )
+
+[node name="Sand_Small8" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1311.63, 492.826 )
+
+[node name="Sand_Small9" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1478.49, 400.365 )
+
+[node name="Sand_Small10" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1636.58, 496.227 )
+
+[node name="Sand_Small11" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1798.03, 583.68 )
+
+[node name="Sand_Small12" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1972.94, 664.406 )
+
+[node name="Sand_Small13" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1633.22, 304.502 )
+
+[node name="Sand_Small14" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1809.81, 232.185 )
+
+[node name="Sand_Small15" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1971.26, 498.479 )
+
+[node name="Sand_Small16" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2142.78, 403.915 )
+
+[node name="Sand_Small17" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2137.71, 764.613 )
+
+[node name="Sand_Small18" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2292.55, 673.844 )
+
+[node name="Sand_Small19" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2472.27, 591.863 )
+
+[node name="Sand_Small20" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2648.07, 501.798 )
+
+[node name="Sand_Small21" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2991.18, 503.378 )
+
+[node name="Sand_Small22" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2827.38, 635.428 )
+
+[node name="Sand_Small23" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 3525.68, 637.673 )
+
+[node name="Sand_Small24" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 3953.49, 637.673 )
+
+[node name="Sand_Small25" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 3741.85, 732.681 )
+
+[node name="Sand_Small26" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 4118.45, 560.459 )
+
+[node name="Sand_Small27" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 4282.31, 630.389 )
+
+[node name="Sand_Small28" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 4473.84, 701.462 )
+
+[node name="Sand_Broken" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1127.18, 394.037 )
+
+[node name="Sand_Broken2" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1966.52, 305.543 )
+
+[node name="Sand_Broken3" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3757.93, 639.359 )
+collision_layer = 32
+collision_mask = 16
+
+[node name="Sand_Broken4" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2825.14, 394.151 )
+
+[node name="Sand_Broken5" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3470.17, 460.239 )
+
+[node name="Fallzone" type="Area2D" parent="."]
+position = Vector2( 2833.2, 994.773 )
+collision_layer = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
+shape = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 18.0203
+margin_top = 8.00905
+margin_right = 125.02
+margin_bottom = 84.009
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 70.0
+margin_bottom = 65.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="HUD"]
+margin_left = 75.0
+margin_top = 38.0
+margin_right = 90.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HUD"]
+margin_left = 95.0
+margin_top = 38.0
+margin_right = 117.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 965.28, 606.446 )
+
+[node name="Spikes2" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 1830.02, 193.835 )
+
+[node name="Spikes3" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 3245.82, 464.446 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 1314.49, 415.783 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 2287.69, 506.078 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 3245.71, 411.136 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 3758.25, 562.275 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 4474, 624.394 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 85.4514, 415.584 )
+
+[node name="Camera2D" type="Camera2D" parent="Rabbit"]
+current = true
+limit_left = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+
+[node name="Exit2" type="Area2D" parent="."]
+position = Vector2( 4707.34, 578.973 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Exit2"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit2"]
+rotation = 1.58015
+shape = SubResource( 4 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
+
+[connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
+[connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="body_entered" from="Exit2" to="Exit2" method="_on_Area2D_body_entered"]

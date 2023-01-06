@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Response.gd" type="Script" id=1]
+[ext_resource path="res://Assets/PixelatedDisplay.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Template.gd" type="Script" id=3]
+[ext_resource path="res://Assets/456289__stratocube__ambient-atmosphere-01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Inside.png" type="Texture" id=5]
+[ext_resource path="res://Assets/vial inventory.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Inside" type="Control"]
+anchor_left = 0.000976562
+anchor_top = 0.0015211
+anchor_right = 1.00098
+anchor_bottom = 1.00152
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 93.0952, 1.82538 )
+scale = Vector2( 0.084, 0.0599961 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 115.0
+margin_top = 25.0
+margin_right = 915.0
+margin_bottom = 375.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+anchor_top = 0.00152115
+anchor_bottom = 0.00152115
+margin_left = 115.0
+margin_top = 25.0
+margin_right = 915.0
+margin_bottom = 375.0
+custom_fonts/font = SubResource( 1 )
+text = "The glass is cold to the touch when you first pick it up. You can make out a faint set of fingerprints on it besode your own. You swirl around the green liquid inside, taking note of it's cosistency. A loud noise from outside startles you and makes you drop the vial and it rolls under the shelf. When you reach your hand under the shelf, you can feel a breeze. Putting your cheek on the floor, you can see a faint light emitting from the back of the bookshelf. "
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Responses" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Response1" type="Button" parent="Responses"]
+anchor_left = 0.022818
+anchor_top = -0.0228165
+anchor_right = 0.022818
+anchor_bottom = -0.0228165
+margin_left = 297.261
+margin_top = 398.175
+margin_right = 697.261
+margin_bottom = 438.175
+custom_fonts/font = SubResource( 2 )
+text = "Move The Shelf"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Next_Scene = "res://Scenes/vial way/StartPassage.tscn"
+
+[node name="Response2" type="Button" parent="Responses"]
+anchor_top = -0.0228149
+anchor_bottom = -0.0228149
+margin_left = 300.0
+margin_top = 451.825
+margin_right = 700.0
+margin_bottom = 491.825
+custom_fonts/font = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+pitch_scale = 0.5
+autoplay = true
+
+[node name="Vial" type="Sprite" parent="."]
+position = Vector2( 511.111, 320.357 )
+scale = Vector2( 3.73809, 3.28175 )
+texture = ExtResource( 6 )

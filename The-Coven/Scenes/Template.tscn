@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Response.gd" type="Script" id=1]
+[ext_resource path="res://Assets/PixelatedDisplay.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Template.gd" type="Script" id=3]
+[ext_resource path="res://Assets/spook.ogg" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Template" type="Control"]
+anchor_left = 0.000976562
+anchor_right = 1.00098
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 112.0
+margin_top = 25.0
+margin_right = 912.0
+margin_bottom = 375.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 25.0
+margin_right = 912.0
+margin_bottom = 375.0
+custom_fonts/font = SubResource( 1 )
+text = "Text"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Responses" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Response1" type="Button" parent="Responses"]
+margin_left = 312.0
+margin_top = 380.0
+margin_right = 712.0
+margin_bottom = 420.0
+custom_fonts/font = SubResource( 2 )
+text = "Response"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Response2" type="Button" parent="Responses"]
+margin_left = 312.0
+margin_top = 420.0
+margin_right = 712.0
+margin_bottom = 460.0
+custom_fonts/font = SubResource( 2 )
+text = "Response"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -1.01
+pitch_scale = 0.6
+autoplay = true

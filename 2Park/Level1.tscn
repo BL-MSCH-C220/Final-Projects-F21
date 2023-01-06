@@ -1,0 +1,250 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Platform/Floor_cake.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
+[ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=6]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Platform/Cake_Small.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Platform/Exit.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Items/portal_yellow.png" type="Texture" id=10]
+[ext_resource path="res://Background/ParallaxBackground.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/music1.ogg" type="AudioStream" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3454.24, 40.9006 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.239216 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 20.8878
+height = 72.9346
+
+[node name="Level1" type="Node2D"]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Floor_cake" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 123.614, 540.422 )
+
+[node name="Floor_cake2" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1007.95, 542.627 )
+
+[node name="Floor_cake3" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2177.95, 552.541 )
+
+[node name="Floor_cake4" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 3205.66, 554.725 )
+
+[node name="Floor_cake5" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 4293.66, 558.056 )
+
+[node name="Floor_cake6" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 5103.16, 566.966 )
+
+[node name="Cake_Small" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 381.407, 542.445 )
+
+[node name="Cake_Small2" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 576.495, 542.445 )
+
+[node name="Cake_Small3" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 769.901, 542.445 )
+
+[node name="Cake_Small4" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1230.71, 602.99 )
+
+[node name="Cake_Small5" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1417.39, 663.534 )
+
+[node name="Cake_Small6" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1604.07, 725.76 )
+
+[node name="Cake_Small7" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1784.02, 665.216 )
+
+[node name="Cake_Small8" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1960.61, 601.308 )
+
+[node name="Cake_Small9" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2392.47, 509.951 )
+
+[node name="Cake_Small10" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2552.05, 445.195 )
+
+[node name="Cake_Small11" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2716.05, 385.195 )
+
+[node name="Cake_Small12" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2876.05, 445.195 )
+
+[node name="Cake_Small13" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3010.05, 513.195 )
+
+[node name="Cake_Small14" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3421.58, 513.195 )
+
+[node name="Cake_Small15" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3587.7, 588.705 )
+
+[node name="Cake_Small16" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3742.5, 513.195 )
+
+[node name="Cake_Small17" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3908.62, 449.012 )
+
+[node name="Cake_Small18" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4082.3, 509.42 )
+
+[node name="Cake_Small19" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4519.96, 561.219 )
+
+[node name="Cake_Small20" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4719.99, 561.522 )
+
+[node name="Cake_Small21" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4891.5, 563.436 )
+
+[node name="Fallzone" type="Area2D" parent="."]
+position = Vector2( 3467.57, 1039.26 )
+collision_layer = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
+shape = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 18.0203
+margin_top = 8.00905
+margin_right = 125.02
+margin_bottom = 84.009
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 70.0
+margin_bottom = 65.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="HUD"]
+margin_left = 75.0
+margin_top = 38.0
+margin_right = 90.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HUD"]
+margin_left = 95.0
+margin_top = 38.0
+margin_right = 117.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1008.87, 505.884 )
+
+[node name="Spikes2" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 3208.3, 518.38 )
+
+[node name="Spikes3" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 4296.44, 522.427 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 1020.09, 462.781 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 2180.55, 477.684 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 3211.01, 473.799 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 4300.03, 466.834 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 4892.82, 491.475 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72.6787, 421.623 )
+
+[node name="Camera2D" type="Camera2D" parent="Rabbit"]
+current = true
+limit_left = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2( 5105.68, 518.232 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Exit"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+rotation = 1.58015
+shape = SubResource( 4 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+
+[connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
+[connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_Area2D_body_entered"]
